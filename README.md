@@ -1,2 +1,2 @@
-# aoc-2020
-My solutions for Advent of Code 2020 written in Python.
+# aoc-2024
+My solutions for Advent of Code 2024 written in Python.
