@@ -17,17 +17,13 @@ def is_safe(levels):
     return False
 
 
-result = 0
-for line in lines:
-    levels = list(map(int, line.split(' ')))
-    if is_safe(levels):
-        result += 1
+reports = [list(map(int, line.split())) for line in lines]
+result = sum(is_safe(levels) for levels in reports)
 
 print(result)
 
 result = 0
-for line in lines:
-    levels = list(map(int, line.split(' ')))
+for levels in reports:
     for removed in range(0, len(levels)):
         dampened_levels = levels.copy()
         del dampened_levels[removed]
